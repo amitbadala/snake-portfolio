@@ -3,15 +3,10 @@
  =========================================================
  * Blk• Design System - v1.0.0
  =========================================================
-
  * Product Page: https://www.creative-tim.com/product/blk-design-system
  * Copyright 2018 Creative Tim (http://www.creative-tim.com)
-
-
  =========================================================
-
  * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
  */
 /*     brand Colors              */
 /* navbar color */
@@ -86,7 +81,7 @@ body {
   line-height: 1.5;
   color: #525f7f;
   text-align: left;
-  background-color:#070629; }
+  background-color: #171941; }
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -10287,8 +10282,8 @@ hr {
   .icon-lg i, .icon-lg svg {
     font-size: 2.95rem; }
 
-/* .icon-lg + .icon-text {
-  width: calc(100% - $icon-size-lg - 1); } */
+.icon-lg + .icon-text {
+  width: calc(100% - $icon-size-lg - 1); }
 
 .icon-sm {
   width: 1.875rem;
@@ -13312,7 +13307,6 @@ hr {
 /*!
 Animate.css - http://daneden.me/animate
 Licensed under the MIT license - http://opensource.org/licenses/MIT
-
 Copyright (c) 2015 Daniel Eden
 */
 .animated {
