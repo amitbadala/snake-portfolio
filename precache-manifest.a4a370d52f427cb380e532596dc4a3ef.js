@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "ca25707397fcc982d7dc1f82555f09a0",
-    "url": "/snake-portfolio/static/media/square1.ca257073.png"
+    "revision": "6619b9792d7d108bb589b51bbd560278",
+    "url": "/snake-portfolio/static/media/square2.6619b979.png"
   },
   {
-    "revision": "d24e41725a560022e25e",
-    "url": "/snake-portfolio/static/css/main.3abcd52e.chunk.css"
+    "revision": "47a0d410c6db2ac8023d",
+    "url": "/snake-portfolio/static/css/main.ec7f3db3.chunk.css"
   },
   {
     "revision": "bcffec1b324385856fe1",
     "url": "/snake-portfolio/static/js/runtime~main.bcffec1b.js"
   },
   {
-    "revision": "320a8e11e126501a436c",
-    "url": "/snake-portfolio/static/js/2.320a8e11.chunk.js"
+    "revision": "7c95a4e87d45d8466687",
+    "url": "/snake-portfolio/static/js/2.7c95a4e8.chunk.js"
   },
   {
     "revision": "e37326c7e0fd9826c1a35b231340f58b",
@@ -60,16 +60,16 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/etherum.4fd59ead.png"
   },
   {
+    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
+    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
+  },
+  {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
     "url": "/snake-portfolio/static/media/nucleo.03ef1918.eot"
   },
   {
     "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
     "url": "/snake-portfolio/static/media/nucleo.f0b489a5.woff"
-  },
-  {
-    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
-    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
   },
   {
     "revision": "b17a118e13e53558658b681a0ebdad82",
@@ -80,12 +80,12 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
   },
   {
-    "revision": "d24e41725a560022e25e",
-    "url": "/snake-portfolio/static/js/main.d24e4172.chunk.js"
+    "revision": "47a0d410c6db2ac8023d",
+    "url": "/snake-portfolio/static/js/main.47a0d410.chunk.js"
   },
   {
-    "revision": "6619b9792d7d108bb589b51bbd560278",
-    "url": "/snake-portfolio/static/media/square2.6619b979.png"
+    "revision": "ca25707397fcc982d7dc1f82555f09a0",
+    "url": "/snake-portfolio/static/media/square1.ca257073.png"
   },
   {
     "revision": "23fa76237f0066f4ffd8f20e77449887",
@@ -156,7 +156,7 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/ripp.98742a82.png"
   },
   {
-    "revision": "c4086a5c9417d2e21a0da0c06fc985fe",
+    "revision": "0a71e6877a6769b0490f0b7325f9fa2a",
     "url": "/snake-portfolio/index.html"
   }
 ];
