@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "6619b9792d7d108bb589b51bbd560278",
-    "url": "/snake-portfolio/static/media/square2.6619b979.png"
+    "revision": "56c56832aae395199308",
+    "url": "/snake-portfolio/static/css/main.cc1e8032.chunk.css"
   },
   {
-    "revision": "47a0d410c6db2ac8023d",
-    "url": "/snake-portfolio/static/css/main.ec7f3db3.chunk.css"
+    "revision": "56c56832aae395199308",
+    "url": "/snake-portfolio/static/js/main.56c56832.chunk.js"
   },
   {
     "revision": "bcffec1b324385856fe1",
     "url": "/snake-portfolio/static/js/runtime~main.bcffec1b.js"
   },
   {
-    "revision": "7c95a4e87d45d8466687",
-    "url": "/snake-portfolio/static/js/2.7c95a4e8.chunk.js"
+    "revision": "393bf39ff4faf64b2ee9",
+    "url": "/snake-portfolio/static/js/2.393bf39f.chunk.js"
   },
   {
     "revision": "e37326c7e0fd9826c1a35b231340f58b",
@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/etherum.4fd59ead.png"
   },
   {
-    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
-    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
-  },
-  {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
     "url": "/snake-portfolio/static/media/nucleo.03ef1918.eot"
+  },
+  {
+    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
+    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
   },
   {
     "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
@@ -80,16 +80,16 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
   },
   {
-    "revision": "47a0d410c6db2ac8023d",
-    "url": "/snake-portfolio/static/js/main.47a0d410.chunk.js"
-  },
-  {
     "revision": "ca25707397fcc982d7dc1f82555f09a0",
     "url": "/snake-portfolio/static/media/square1.ca257073.png"
   },
   {
     "revision": "23fa76237f0066f4ffd8f20e77449887",
     "url": "/snake-portfolio/static/media/square3.23fa7623.png"
+  },
+  {
+    "revision": "6619b9792d7d108bb589b51bbd560278",
+    "url": "/snake-portfolio/static/media/square2.6619b979.png"
   },
   {
     "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
@@ -156,7 +156,7 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/ripp.98742a82.png"
   },
   {
-    "revision": "0a71e6877a6769b0490f0b7325f9fa2a",
+    "revision": "4d2b355ceb87748e4f83d0e39095eba1",
     "url": "/snake-portfolio/index.html"
   }
 ];
