@@ -83,7 +83,7 @@ class ComponentsNavbar extends React.Component {
               data-placement="bottom"
               to="/"
               rel="noopener noreferrer"
-              title="Designed and Coded by Creative Tim"
+              title="Amit Portfolio"
               tag={Link}
             >
                
@@ -99,6 +99,71 @@ class ComponentsNavbar extends React.Component {
               <span className="navbar-toggler-bar bar3" />
             </button> */}
           </div> 
+          <Collapse
+            className={"justify-content-end " + this.state.collapseOut}
+            navbar
+            isOpen={this.state.collapseOpen}
+            onExiting={this.onCollapseExiting}
+            onExited={this.onCollapseExited}
+          >
+            <div className="navbar-collapse-header">
+              <Row>
+                <Col className="collapse-brand" xs="6">
+                  <a href="#pablo" onClick={e => e.preventDefault()}>
+                    BLK•React
+                  </a>
+                </Col>
+                <Col className="collapse-close text-right" xs="6">
+                  <button
+                    aria-expanded={this.state.collapseOpen}
+                    className="navbar-toggler"
+                    onClick={this.toggleCollapse}
+                  >
+                    <i className="tim-icons icon-simple-remove" />
+                  </button>
+                </Col>
+              </Row>
+            </div>
+            <Nav navbar>
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  data-toggle="dropdown"
+                  href="#pablo"
+                  nav
+                  onClick={e => e.preventDefault()}
+                >
+                  <i className="fa fa-cogs d-lg-none d-xl-none" />
+                  Menu
+                </DropdownToggle>
+                <DropdownMenu className="dropdown-with-icons">
+                  <DropdownItem>
+                    <i className="tim-icons icon-paper" />
+                    About
+                  </DropdownItem>
+                  <DropdownItem>
+                    <i className="tim-icons icon-bullet-list-67" />
+                    Portfolio
+                  </DropdownItem>
+                  <DropdownItem>
+                    <i className="tim-icons icon-image-02" />
+                    Contact
+                  </DropdownItem> 
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              <NavItem>
+                <Button
+                  className="nav-link d-none d-lg-block"
+                  color="default"
+                  onClick={this.scrollToDownload}
+                >
+                  <i className="tim-icons icon-cloud-download-93" /> Resume
+                </Button>
+              </NavItem>
+            </Nav>
+          </Collapse>
+       
         </Container>
       </Navbar>
     );
