@@ -16,9 +16,8 @@ class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
-         <Container>
-         <h1 className="title">Reach me</h1>
-         {/* <Row>
+        <Container>
+          {/* <Row>
             <Col md="3">
               <h1 className="title">Reach me</h1>
             </Col>
@@ -113,7 +112,7 @@ class Footer extends React.Component {
             </Col>
           </Row>*/}
         </Container>
-      </footer> 
+      </footer>
     );
   }
 }

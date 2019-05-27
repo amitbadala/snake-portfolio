@@ -86,7 +86,6 @@ class ComponentsNavbar extends React.Component {
               title="Amit Portfolio"
               tag={Link}
             >
-               
               Amit Badala
             </NavbarBrand>
             {/* <button
@@ -98,7 +97,7 @@ class ComponentsNavbar extends React.Component {
               <span className="navbar-toggler-bar bar2" />
               <span className="navbar-toggler-bar bar3" />
             </button> */}
-          </div> 
+          </div>
           <Collapse
             className={"justify-content-end " + this.state.collapseOut}
             navbar
@@ -108,11 +107,6 @@ class ComponentsNavbar extends React.Component {
           >
             <div className="navbar-collapse-header">
               <Row>
-                <Col className="collapse-brand" xs="6">
-                  <a href="#pablo" onClick={e => e.preventDefault()}>
-                    BLK•React
-                  </a>
-                </Col>
                 <Col className="collapse-close text-right" xs="6">
                   <button
                     aria-expanded={this.state.collapseOpen}
@@ -139,17 +133,22 @@ class ComponentsNavbar extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem>
-                    <i className="tim-icons icon-paper" />
-                    About
+                    <a href="#about" className="bg-primary">
+                      About
+                    </a>
                   </DropdownItem>
                   <DropdownItem>
-                    <i className="tim-icons icon-bullet-list-67" />
-                    Portfolio
+                    {" "}
+                    <a href="#about" className="bg-success">
+                      Portfolio
+                    </a>
                   </DropdownItem>
                   <DropdownItem>
-                    <i className="tim-icons icon-image-02" />
-                    Contact
-                  </DropdownItem> 
+                    {" "}
+                    <a href="#about" className="bg-warning">
+                      Contact
+                    </a>
+                  </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
@@ -163,7 +162,6 @@ class ComponentsNavbar extends React.Component {
               </NavItem>
             </Nav>
           </Collapse>
-       
         </Container>
       </Navbar>
     );
