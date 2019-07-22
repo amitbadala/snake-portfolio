@@ -36,12 +36,16 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/square2.6619b979.png"
   },
   {
-    "revision": "23fa76237f0066f4ffd8f20e77449887",
-    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
+    "revision": "ff004a0e5de54ba9dbd8583fa7e1b3f5",
+    "url": "/snake-portfolio/static/media/square5.ff004a0e.png"
   },
   {
     "revision": "ca25707397fcc982d7dc1f82555f09a0",
     "url": "/snake-portfolio/static/media/square1.ca257073.png"
+  },
+  {
+    "revision": "23fa76237f0066f4ffd8f20e77449887",
+    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
   },
   {
     "revision": "b81dabc0bc6ca52fce921e3a928d5e0f",
@@ -50,10 +54,6 @@ self.__precacheManifest = [
   {
     "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
     "url": "/snake-portfolio/static/media/square4.8fdf9ee2.png"
-  },
-  {
-    "revision": "ff004a0e5de54ba9dbd8583fa7e1b3f5",
-    "url": "/snake-portfolio/static/media/square5.ff004a0e.png"
   },
   {
     "revision": "e37326c7e0fd9826c1a35b231340f58b",
