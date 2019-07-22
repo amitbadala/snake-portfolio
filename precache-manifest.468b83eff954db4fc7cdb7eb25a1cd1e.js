@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a593831b5744682112da",
-    "url": "/snake-portfolio/static/css/main.78134a00.chunk.css"
+    "revision": "8943d96893e414b69281",
+    "url": "/snake-portfolio/static/css/main.b46ab656.chunk.css"
   },
   {
-    "revision": "a593831b5744682112da",
-    "url": "/snake-portfolio/static/js/main.a593831b.chunk.js"
+    "revision": "8943d96893e414b69281",
+    "url": "/snake-portfolio/static/js/main.8943d968.chunk.js"
   },
   {
     "revision": "bcffec1b324385856fe1",
@@ -16,12 +16,12 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/js/2.3b1781f9.chunk.js"
   },
   {
-    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
-    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
-  },
-  {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
     "url": "/snake-portfolio/static/media/nucleo.03ef1918.eot"
+  },
+  {
+    "revision": "5987dd12fea78ce5f97ae601b08ec03c",
+    "url": "/snake-portfolio/static/media/nucleo.5987dd12.woff2"
   },
   {
     "revision": "f0b489a5dbbff08833d21024f9fcbd4e",
@@ -32,6 +32,10 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/nucleo.b17a118e.ttf"
   },
   {
+    "revision": "23fa76237f0066f4ffd8f20e77449887",
+    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
+  },
+  {
     "revision": "ca25707397fcc982d7dc1f82555f09a0",
     "url": "/snake-portfolio/static/media/square1.ca257073.png"
   },
@@ -40,8 +44,8 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/square2.6619b979.png"
   },
   {
-    "revision": "23fa76237f0066f4ffd8f20e77449887",
-    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
+    "revision": "b81dabc0bc6ca52fce921e3a928d5e0f",
+    "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
   },
   {
     "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
@@ -52,10 +56,6 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/square5.ff004a0e.png"
   },
   {
-    "revision": "b81dabc0bc6ca52fce921e3a928d5e0f",
-    "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
-  },
-  {
     "revision": "e37326c7e0fd9826c1a35b231340f58b",
     "url": "/snake-portfolio/static/media/path4.e37326c7.png"
   },
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/amitbadala_profile.56ebc5d8.jpg"
   },
   {
-    "revision": "ec2e3c120c653a02a588f6a19db335f7",
+    "revision": "e5cfdc7f029093704c121a7b9f5f6865",
     "url": "/snake-portfolio/index.html"
   }
 ];
