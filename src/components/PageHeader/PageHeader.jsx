@@ -6,38 +6,22 @@ import {
   Col,
   Table,
   Button,
-  Card,
-  CardHeader,
-  CardBody,
-  Label,
   FormGroup,
   Form,
-  Input,
-  FormText,
-  NavItem,
-  NavLink,
-  Nav,
-  TabContent,
-  TabPane,
-  UncontrolledTooltip,
-  UncontrolledCarousel,
-  CardTitle
-} from "reactstrap";
+  Input} from "reactstrap";
+  
 
 const generateFruitLocaton = () => {
   const min = 1;
   const max = 96;
   const top = Math.floor(min + (Math.random() * (max - min)) / 4) * 4;
-  const left = Math.floor(min + (Math.random() * (max - min)) / 4) * 4;
-  // const fruitLocation = {
-  //   top:`${top}%`,
-  //   left:`${left}%`
-  // }
+  const left = Math.floor(min + (Math.random() * (max - min)) / 4) * 4; 
   return [left, top];
 };
 
 class PageHeader extends React.Component {
   state = {
+    mounted:false,
     modalShow: true,
     gameover: false,
     speed: 250,
@@ -49,10 +33,11 @@ class PageHeader extends React.Component {
     aboutFruit: generateFruitLocaton(),
     portfolioFruit: generateFruitLocaton(),
     contactFruit: generateFruitLocaton(),
-    currentPage: "about"
+    currentPage: "about",
+    gameAreaBorderClass:"text-primary"
   };
   componentDidMount() {
-    // setInterval(this.snakeMovement,this.state.speed);
+    this.setState({mounted:true})
     this.startPlay();
     document.onkeydown = this.changeDirection;
   }
@@ -64,33 +49,33 @@ class PageHeader extends React.Component {
   }
 
   startPlay = () => {
-    this.state.modalShow = false;
-    this.state.snakeMoveTimer = setInterval(
+    this.setState({modalShow:false});
+    this.setState({snakeMoveTimer:setInterval(
       this.snakeMovement,
       this.state.speed
-    );
+    )});
   };
 
   changeDirection = e => {
     e = e || window.event;
     switch (e.keyCode) {
       case 37:
-        if (this.state.direction != "RIGHT") {
+        if (this.state.direction !==  "RIGHT") {
           this.setState({ direction: "LEFT" });
         }
         break;
       case 38:
-        if (this.state.direction != "DOWN") {
+        if (this.state.direction !==  "DOWN") {
           this.setState({ direction: "UP" });
         }
         break;
       case 39:
-        if (this.state.direction != "LEFT") {
+        if (this.state.direction !==  "LEFT") {
           this.setState({ direction: "RIGHT" });
         }
         break;
       case 40:
-        if (this.state.direction != "UP") {
+        if (this.state.direction !==  "UP") {
           this.setState({ direction: "DOWN" });
         }
         break;
@@ -141,7 +126,7 @@ class PageHeader extends React.Component {
     let head = dots[dots.length - 1];
     dots.pop();
     dots.forEach(dot => {
-      if (head[0] == dot[0] && head[1] == dot[1]) {
+      if (head[0] === dot[0] && head[1] === dot[1]) {
         console.log(head, dot, "self");
         this.endGame();
       }
@@ -172,20 +157,7 @@ class PageHeader extends React.Component {
       snakeDots: dots
     });
 
-    this.isfruitEaten();
-    // if(head[0]==this.state.fruit[0] && head[1]==this.state.fruit[1])
-    // {
-
-    //   this.state.snakeDots.push(head);
-    //   this.state.speed = 500 - (5*this.state.snakeDots.length);
-    //   this.state.snakemovement = setInterval(this.snakeMovement,this.state.speed);
-
-    //   let newSnake = [...this.state.snakeDots];
-    //   newSnake.unshift([])
-    //   this.setState({
-    //     snakeDots: newSnake
-    //   })
-    // }
+    this.isfruitEaten(); 
   };
 
   endGame = () => {
@@ -215,33 +187,25 @@ class PageHeader extends React.Component {
     // someProperty.flag = true;
     // this.setState({someProperty})
 
-    if (head[0] == aboutFruit[0] && head[1] == aboutFruit[1]) {
-      if (this.currentPage != "about") {
-        this.setState({ currentPage: "about" });
+    if (head[0] === aboutFruit[0] && head[1] === aboutFruit[1]) {
+      if (this.currentPage !==  "about") {
+        this.setState({ currentPage: "about",gameAreaBorderClass:"text-primary" });
         this.setState({ aboutFruit: generateFruitLocaton() });
         this.updateSnake();
       }
-    } else if (head[0] == portfolioFruit[0] && head[1] == portfolioFruit[1]) {
-      if (this.currentPage != "portfolio") {
-        this.setState({ currentPage: "portfolio" });
+    } else if (head[0] === portfolioFruit[0] && head[1] === portfolioFruit[1]) {
+      if (this.currentPage !==  "portfolio") {
+        this.setState({ currentPage: "portfolio",gameAreaBorderClass:"text-success" });
         this.setState({ portfolioFruit: generateFruitLocaton() });
         this.updateSnake();
       }
-    } else if (head[0] == contactFruit[0] && head[1] == contactFruit[1]) {
-      if (this.currentPage != "contact") {
-        this.setState({ currentPage: "contact" });
+    } else if (head[0] === contactFruit[0] && head[1] === contactFruit[1]) {
+      if (this.currentPage !==  "contact") {
+        this.setState({ currentPage: "contact",gameAreaBorderClass:"text-warning"});
         this.setState({ contactFruit: generateFruitLocaton() });
         this.updateSnake();
       }
     }
-
-    // if (head[0] == fruit[0] && head[1] == fruit[1]) {
-    //   console.log(head, this.state.fruit);
-    //   this.state.fruit = generateFruitLocaton();
-
-    //   // this.increaseSpeed();
-    //   this.updateScore();
-    // }
   };
 
   updateSnake = () => {
@@ -271,7 +235,13 @@ class PageHeader extends React.Component {
     this.setState({ currentPage: navSection });
   };
 
+
+
   render() {
+    if(!this.state.mounted)
+    {
+      return "Loading....";
+    }
     return (
       <div className="section section-basic">
         <img alt="..." className="path" src={require("assets/img/path4.png")} />
@@ -286,7 +256,7 @@ class PageHeader extends React.Component {
           <Row>
             <Col md="4">
               <div className="navMenu">
-                <ul>
+                <ul> 
                   <li>
                     <a
                       href="#about"
@@ -318,7 +288,7 @@ class PageHeader extends React.Component {
                 </ul>
               </div>
               <div className="game-area">
-                <div className="test">
+                <div className={`test ${this.state.gameAreaBorderClass}`}>
                   <div className="bar top" />
                   <div className="bar right delay" />
                   <div className="bar bottom delay" />
@@ -343,36 +313,36 @@ class PageHeader extends React.Component {
               </div>
               <div className="text-center d-sm-block d-md-none">
                 <Button
-                  color="primary"
+                  color="neutral"
                   type="button"
                   className="btn-sm"
                   onClick={() => this.setState({ direction: "LEFT" })}
                 >
-                  Left
+                  <i className="fas fa-arrow-left"></i> 
                 </Button>
                 <Button
-                  color="primary"
+                  color="neutral"
                   type="button"
                   className="btn-sm"
                   onClick={() => this.setState({ direction: "UP" })}
                 >
-                  Up
+                  <i className="fas fa-arrow-up"></i> 
                 </Button>
                 <Button
-                  color="primary"
+                  color="neutral"
                   type="button"
                   className="btn-sm"
                   onClick={() => this.setState({ direction: "DOWN" })}
                 >
-                  Down
+                 <i className="fas fa-arrow-down"></i> 
                 </Button>
                 <Button
-                  color="primary"
+                  color="neutral"
                   type="button"
                   className="btn-sm"
                   onClick={() => this.setState({ direction: "RIGHT" })}
                 >
-                  Right
+                 <i className="fas fa-arrow-right"></i> 
                 </Button>
               </div>
             </Col>
@@ -427,20 +397,20 @@ function UpdateNavContent(props) {
       return (
         <>
           <Col md="5" className="content-title">
-            <h1 className="profile-title text-left">Hi I'm Amit</h1>
+            <h1 className="profile-title text-left text-primary">About</h1>
             {/* <h5 className="text-on-back">Hi I'm</h5> */}
             <p className="profile-description text-left">
               I like javascript and everything on web, when my dev-senses kick
               in I build presumably awesome stuff. I've always been drawn to the
               overlap between design and development.{" "}
             </p>
-
+            <br/>
             <p>
               My skills are broad: from ux to design, front end to back end
               development.I enjoy each aspect, and love building sites & mobile
               apps from start to finish, for clients all over the world.
             </p>
-
+            <br/>
             <p>
               I stay close to community and try to keep pace with which the web
               is evolving. I also like to blog about what I learn or things
@@ -460,6 +430,35 @@ function UpdateNavContent(props) {
     case "contact": {
       return <Contact />;
     }
+    default : {return (
+      <>
+        <Col md="5" className="content-title">
+          <h1 className="profile-title text-left text-primary">About</h1>
+          {/* <h5 className="text-on-back">Hi I'm</h5> */}
+          <p className="profile-description text-left">
+            I like javascript and everything on web, when my dev-senses kick
+            in I build presumably awesome stuff. I've always been drawn to the
+            overlap between design and development.{" "}
+          </p>
+          <br/>
+          <p>
+            My skills are broad: from ux to design, front end to back end
+            development.I enjoy each aspect, and love building sites & mobile
+            apps from start to finish, for clients all over the world.
+          </p>
+          <br/>
+          <p>
+            I stay close to community and try to keep pace with which the web
+            is evolving. I also like to blog about what I learn or things
+            which I find interesting. I have working experience in Angular,
+            javascript, .Net, SQL Server
+          </p>
+        </Col>
+        <Col md="3">
+          <CustomTable />
+        </Col>
+      </>
+    );}
   }
 }
 
@@ -470,7 +469,7 @@ export class CustomTable extends React.Component {
         <thead>
           <tr>
             <th>
-              <h3 className="title mb-2 lowerCase">What I do</h3>
+              <h3 className="title mb-2 lowerCase skills text-primary">What I do</h3>
             </th>
           </tr>
         </thead>
@@ -478,8 +477,8 @@ export class CustomTable extends React.Component {
           <tr>
             <td>
               <p>
-                <span className="title text-primary">Front-end </span>
-                Javascript, Angular 5, React, Jquery, ,Ionic Framework 4, HTML,
+                <span className="title">Front-end </span>
+                Javascript, Angular, React, Redux, Jquery, Ionic Framework, Typescript, HTML,
                 CSS
               </p>
             </td>
@@ -487,15 +486,15 @@ export class CustomTable extends React.Component {
           <tr>
             <td>
               <p>
-                <span className="title text-primary">Back-end </span>
-                NodeJS, C#, MSSQL, mongoDB
+                <span className="title">Back-end </span>
+                NodeJS, Express, C#, .Net, MsSQL, MongoDB, Mongoose
               </p>
             </td>
           </tr>
           <tr>
             <td>
               <p>
-                <span className="title text-primary">Others </span> Photoshop
+                <span className="title">Others </span> Photoshop, IIS, Netlify, Heroku
               </p>
             </td>
           </tr>
@@ -506,27 +505,82 @@ export class CustomTable extends React.Component {
 }
 
 export class Contact extends React.Component {
+  constructor(props) {
+    super(props);
+   
+    this.state = this.initialState;
+   this.handleCompanyChange = this.handleCompanyChange.bind(this);
+   this.handleEmailChange = this.handleEmailChange.bind(this);
+   this.handleMessageChange = this.handleMessageChange.bind(this);
+   this.handlePhoneChange = this.handlePhoneChange.bind(this);
+   this.handleNameChange  = this.handleNameChange.bind(this);
+  }
+  initialState = { 
+    name:"",
+    phone:"",
+    email:"",
+    companyName:"",
+    message:"",
+    thankyou:"" 
+}
+ 
+  handleNameChange(event){
+    this.setState({name:event.target.value});
+  }
+
+  handleCompanyChange(event){
+    this.setState({companyName:event.target.value});
+  }
+
+  handleEmailChange(event){
+    this.setState({email:event.target.value});
+  }
+
+  handlePhoneChange(event){
+    this.setState({phone:event.target.value});
+  }
+
+  handleMessageChange(event){
+    this.setState({message:event.target.value});
+  } 
+
+  sendmail = (event)=> {    
+    const {name,email,phone,companyName,message} = this.state;
+    event.preventDefault(); 
+
+    window.emailjs.send(
+      'gmail',
+      'template_mZ6Chr60',
+      {
+        message_html:`${name} from ${companyName} was interested in your profile, his message ${message}. You can contact him 
+        on his email: ${email} or phone : ${phone}`, 
+      })
+      .then(() => {
+        this.setState(this.initialState);
+        this.setState({ thankyou: "Thank you for showing interest !" });
+      })
+      // Handle errors here however you like, or use a React error boundary
+      .catch(err => console.error('Failed to send feedback. Error: ', err))
+  
+  }
   render() {
     return (
       <>
-        <Col md="5">
-          <Card className="card-plain">
-            <CardHeader className="content-title">
-              <h1 className="profile-title text-left">Contact</h1>
-            </CardHeader>
-            <CardBody>
-              <Form>
+        <Col className="content-title" md="5"> 
+              <h1 className="profile-title text-left text-warning">Contact</h1>  
+              <p>{this.state.thankyou}</p>
+              <Form id="contact-form" onSubmit={this.sendmail}>
                 <Row>
                   <Col md="6">
                     <FormGroup>
                       <label>Your Name</label>
-                      <Input type="text" />
+                      <Input value={this.state.name} onChange={this.handleNameChange} type="text" name="from_name"/>
                     </FormGroup>
                   </Col>
                   <Col md="6">
                     <FormGroup>
                       <label>Email address</label>
-                      <Input type="email" />
+                      <Input value={this.state.email} type="email" onChange={this.handleEmailChange} name="from_email"/>
                     </FormGroup>
                   </Col>
                 </Row>
@@ -534,13 +588,13 @@ export class Contact extends React.Component {
                   <Col md="6">
                     <FormGroup>
                       <label>Phone</label>
-                      <Input type="text" />
+                      <Input type="text" value={this.state.phone} onChange={this.handlePhoneChange} name="phoneNo"/>
                     </FormGroup>
                   </Col>
                   <Col md="6">
                     <FormGroup>
                       <label>Company</label>
-                      <Input type="text" />
+                      <Input type="text" value={this.state.companyName} name="companyName" onChange={this.handleCompanyChange}/>
                     </FormGroup>
                   </Col>
                 </Row>
@@ -548,62 +602,60 @@ export class Contact extends React.Component {
                   <Col md="12">
                     <FormGroup>
                       <label>Message</label>
-                      <Input type="text" />
+                      <Input type="text" value={this.state.message_html} name="message_html" onChange={this.handleMessageChange}/>
                     </FormGroup>
                   </Col>
                 </Row>
                 <Button
                   className="btn btn-warning"
                   color="primary"
-                  data-placement="right"
-                  id="tooltip341148792"
-                  type="button"
+                  data-placement="right" 
+                  type="submit" 
+                  value="Submit" 
                 >
                   Send
-                </Button>
-                {/* <UncontrolledTooltip
-              delay={0}
-              placement="right"
-              target="tooltip341148792"
-            >
-              Can't wait for your message
-            </UncontrolledTooltip> */}
-              </Form>
-            </CardBody>
-          </Card>
+                </Button> 
+              </Form> 
         </Col>
         <Col md="3">
           <Table dark>
             <thead>
               <tr>
-                <th>
-                  <h3 className="title mb-2 lowerCase">Let's get in touch.</h3>
+                <th> 
+                  <h3 className="title mb-2 lowerCase skills text-warning">Let's get in touch.</h3>
                 </th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
-                  <div className="btn-wrapper profile">
-                    <ul>
-                      <li>
-                        <a href="https://github.com/amitbadala">
-                          <h4>LinkedIn</h4>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/amitbadala">
-                          <h4>Github</h4>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="https://github.com/amitbadala">
-                          <h4>Twitter</h4>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </td>
+                <p><i className="far fa-envelope"></i> : amitbadala07@gmail.com</p>
+              <p><i className ="fas fa-mobile-alt"></i> : (+91)- 9870758470</p>
+                </td> 
+              </tr>
+              <tr>
+              <td>
+                <div className="btn-wrapper profile"> 
+                <Button
+                  className="btn-icon btn-neutral btn-round btn-simple"
+                  color="default"
+                  href="https://www.linkedin.com/in/amitbadala/"
+                  id="tooltip230450801"
+                  target="_blank"
+                >
+                  <i className="fab fa-linkedin" />
+                </Button> 
+                <Button
+                  className="btn-icon btn-neutral btn-round btn-simple"
+                  color="default"
+                  href="https://github.com/amitbadala"
+                  id="tooltip318450378"
+                  target="_blank"
+                >
+                  <i className="fab fa-github" />
+                </Button> 
+              </div>
+                 </td>
               </tr>
             </tbody>
           </Table>
@@ -617,55 +669,39 @@ export class Portfolio extends React.Component {
   render() {
     return (
       <>
-        <Col className="content-title" md="8">
-          <h1 className="profile-title text-left">Portfolio</h1>
+        <Col className="content-title portfolio" md="8">
+          <h1 className="profile-title text-left text-success">Portfolio</h1>
           <Row className="justify-content-center">
             <Col lg="12">
               <Row className="row-grid">
-                <Col lg="6">
-                  <div className="info">
-                    <h4 className="info-title">OneGo</h4>
-                    <hr className="line-success" />
-                    <p>
-                      OneGo, is a unique Insruance reseller app.
-                      <br />
-                      <strong className="text-success">
-                        Technology :{" "}
-                      </strong>{" "}
-                      Ionic Framework v4, Angular 5, Web API, MSSQL.
-                    </p>
-                  </div>
-                </Col>
-                <Col lg="6">
-                  <div className="info">
-                    <h4 className="info-title">Oneinsure.com</h4>
-                    <hr className="line-success" />
-                    <p>
-                      It's an Insurance E-commerce platform.
-                      <br />
-                      <strong className="text-success">
-                        Technology :
-                      </strong>{" "}
-                      .Net MVC Framework, Web API, Angular js 1 and MSSQL
-                    </p>
-                  </div>
-                </Col>
-                <Col lg="6">
-                  <div className="info">
-                    <h4 className="info-title">CMS Blog Engine</h4>
-                    <hr className="line-success" />
-                    <p>
-                      Developing a CMS system from Scratch for easy management
-                      of blogs on Portal.
-                      <br />
-                      <strong className="text-success">
-                        Technology :
-                      </strong>{" "}
-                      .Net MVC Framework, Web API, Angular js 1 and MSSQL
-                    </p>
-                  </div>
-                </Col>
-              </Row>
+                <ul>
+                  <li><h4>Idyll - Open Source Contribution to markup language IDYLL using react & node , checkout my <a href="https://github.com/idyll-lang/idyll/pulls?q=is%3Apr+is%3Aclosed+author%3Aamitbadala" target="_blank" 
+                  rel="noopener noreferrer">contribution</a></h4></li>
+                  <li><h4>Onego - Hybrid Mobile application for reseller agents developed using Ionic Framework,Angular | <a href="https://play.google.com/store/apps/details?id=com.robinhood.pos" target="_blank" 
+                  rel="noopener noreferrer">Android</a> </h4></li>
+                  <li><h4>Oneinsure - Hybrid Mobile application for users to manage their insurance policies developed using Ionic Framework,Angular | <a href="https://apps.apple.com/in/app/oneinsure-your-insurance-app/id1211262262" target="_blank" 
+                  rel="noopener noreferrer">Android</a> ,<a href="https://apps.apple.com/in/app/oneinsure-your-insurance-app/id1211262262" target="_blank" 
+                  rel="noopener noreferrer">iOs</a></h4></li>
+                  <li><h4>Investment Ecommerce - Developed three verticals of investment ecommerce</h4>
+                  <ul>
+                    <li><a href="https://www.oneinsure.com/life-insurance/child-plan" target="_blank" 
+                  rel="noopener noreferrer">Child Insurance</a></li>
+                    <li><a href="https://www.oneinsure.com/life-insurance/retirement" target="_blank" 
+                  rel="noopener noreferrer">Retirement Insurance</a></li>
+                    <li><a href="https://www.oneinsure.com/life-insurance/shortterm" target="_blank" 
+                  rel="noopener noreferrer">Short Term Insurance</a></li>
+                    <li><a href="https://www.oneinsure.com/life-insurance/moneyback" target="_blank" 
+                  rel="noopener noreferrer">Money Back</a></li>
+                    </ul></li>
+                  <br/>
+                  <li><h4>CMS Blog Engine - Created custom themes and an interface to dynamically switch
+between them</h4></li>
+                  <li><h4>Motilal Oswal CRM - worked on one of India's largest trading platform provider</h4></li>
+                  <li><h4>Car Rental Project - Car rental web applicatoin </h4></li>
+                </ul>
+                <h5>For more  details download my resume, <a href="https://drive.google.com/file/d/1h0Azd5TEccOvFmP-KCKVTAKQzewtizfe/view" target="_blank" 
+                  rel="noopener noreferrer">here</a></h5>
+               </Row>
             </Col>
           </Row>
         </Col>

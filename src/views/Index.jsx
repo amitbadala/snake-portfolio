@@ -3,52 +3,64 @@ import React from "react";
 // core components
 import IndexNavbar from "components/Navbars/IndexNavbar.jsx";
 import PageHeader from "components/PageHeader/PageHeader.jsx";
-import Footer from "components/Footer/Footer.jsx";
-
-// sections for this page/view
-import Basics from "views/IndexSections/Basics.jsx";
-import Navbars from "views/IndexSections/Navbars.jsx";
-import Tabs from "views/IndexSections/Tabs.jsx";
-import Pagination from "views/IndexSections/Pagination.jsx";
-import Notifications from "views/IndexSections/Notifications.jsx";
-import Typography from "views/IndexSections/Typography.jsx";
-import JavaScript from "views/IndexSections/JavaScript.jsx";
-import NucleoIcons from "views/IndexSections/NucleoIcons.jsx";
-import Signup from "views/IndexSections/Signup.jsx";
-import Examples from "views/IndexSections/Examples.jsx";
-import Download from "views/IndexSections/Download.jsx";
+import Footer from "components/Footer/Footer.jsx"; 
+import Particles from 'react-particles-js';
 
 class Index extends React.Component {
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      mounted:false 
+    }
+  }
+   
+  componentDidMount() { 
+    this.setState({mounted:true});  
+    console.log("%cCheckout my resume here => https://drive.google.com/file/d/1h0Azd5TEccOvFmP-KCKVTAKQzewtizfe/view ", "font-size:15px");
     document.body.classList.toggle("index-page");
   }
   componentWillUnmount() {
     document.body.classList.toggle("index-page");
   }
   render() {
+    if(!this.state.mounted)
+    {
+      return null;
+    } 
+    else
+    {
     return (
       <>
-        <IndexNavbar />
+      <Particles  style={{
+          "position":"absolute"
+        }} params={{ 
+	    "particles": {
+	        "number": {
+	            "value": 20
+	        },
+	        "size": {
+	            "value": 1
+	        }
+	    },
+	    "interactivity": {
+	        "events": {
+	            "onhover": {
+	                "enable": true,
+	                "mode": "repulse"
+	            }
+	        }
+	    }
+	}}/>
+        <IndexNavbar /> 
         <div className="wrapper">
           <PageHeader />
-          {/* <div className="main">
-            <Basics />
-            <Navbars />
-            <Tabs />
-            <Pagination />
-            <Notifications />
-            <Typography />
-            <JavaScript />
-            <NucleoIcons />
-            <Signup />
-            <Examples />
-            <Download />
-          </div> */}
           <Footer />
         </div>
       </>
     );
   }
+}
 }
 
 export default Index;

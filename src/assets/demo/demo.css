@@ -522,6 +522,7 @@ box-shadow:         inset 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,
   background-color: #fff;
   border-radius: 50%;
   /* border: 1px solid #767676; */
+  box-shadow: 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   z-index: 2;
 }
 
@@ -529,10 +530,11 @@ box-shadow:         inset 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,
   position: absolute;
   width: 4%;
   height: 4%;
-  /* background-color: #ff2c64; */
-  /* border: 1px solid #fff;  */
+  border-radius: 50%;
+  border: 1px solid white;
   z-index: 1;
   animation: blinker 1s linear infinite;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 @keyframes blinker {
@@ -567,7 +569,9 @@ h5 {
 }
 
 h1 {
+  font-size: 22px;
   margin-top: 10px;
+  font-weight: 600;
 }
 
 .test,
@@ -653,7 +657,7 @@ body {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
 }
 
@@ -705,6 +709,8 @@ strong {
   width: 100%;
   color: white;
   text-align: center;
+  padding: 10px;
+  border:2px solid #0d0e1d
 }
 
 .info .info-title {
@@ -715,4 +721,82 @@ strong {
   left: -110px;
   max-width: 60%;
   top: 15px;
+}
+
+
+.skills{
+  margin-top:0px;
+  font-size: 18px;
+}
+
+.profile-image{
+  height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+}
+
+.footer .title {
+  margin:15px 0px 0px 0px;
+}
+
+.row-grid > ul > li h4{
+  line-height: 1.45em;
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.portfolio a {
+  color: #00f2c3 !important;
+}
+ 
+.pageTitle {
+  margin-bottom:0px;
+}
+
+.navbar.navbar-transparent{
+  padding: 0.9375rem;
+}
+
+label{
+  color:white;
+}
+
+@media screen and (max-width: 900px){
+  .section-basic {
+    padding-bottom:180px;
+    padding-top: 100px;
+  }
+  .footer .title {
+    margin:5px 0px 0px 0px;
+  }
+
+  .footer{
+    text-align: left;
+  }
+
+  .profile-image{
+    bottom: 20px;
+    right: 15px;
+    top: unset;
+  }
+
+  .show, .footer:hover {
+    display: block;
+}
+}
+
+
+.text-primary{
+  color:#F8D230!important;
+}
+.bg-primary{
+  background-color: #F8D230!important;
+}
+a.text-primary:hover, a.text-primary:focus{
+  color:yellow!important;
+}
+
+.btn-neutral{
+  color: #161941;
 }

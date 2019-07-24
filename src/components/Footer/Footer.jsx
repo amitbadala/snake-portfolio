@@ -1,116 +1,51 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"; 
 // reactstrap components
 import {
   Button,
-  NavItem,
-  NavLink,
-  Nav,
   Container,
   Row,
-  Col,
-  UncontrolledTooltip
-} from "reactstrap";
+  Col} from "reactstrap";
 
 class Footer extends React.Component {
   render() {
     return (
       <footer className="footer">
         <Container>
-          {/* <Row>
+          <Row>
             <Col md="3">
               <h1 className="title">Reach me</h1>
             </Col>
-            <Col md="3">
-              <Nav>
-                <NavItem>
-                  <NavLink to="/" tag={Link}>
-                    Home
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/landing-page" tag={Link}>
-                    Landing
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/register-page" tag={Link}>
-                    Register
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/profile-page" tag={Link}>
-                    Profile
-                  </NavLink>
-                </NavItem>
-              </Nav>
+            <Col md="3"> 
+              <p><i className="far fa-envelope"></i> : amitbadala07@gmail.com</p>
+              <p><i className ="fas fa-mobile-alt"></i> : (+91)- 9870758470</p>
             </Col>
-            <Col md="3">
-              <Nav>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
-                    Contact Us
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
-                    About Us
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
-                    Blog
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink href="https://opensource.org/licenses/MIT">
-                    License
-                  </NavLink>
-                </NavItem>
-              </Nav>
-            </Col>
-            <Col md="3">
-              <h3 className="title">Follow us:</h3>
-              <div className="btn-wrapper profile">
+            
+            <Col md="3"> 
+              <div className="btn-wrapper profile"> 
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://twitter.com/creativetim"
-                  id="tooltip622135962"
-                  target="_blank"
-                >
-                  <i className="fab fa-twitter" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip622135962">
-                  Follow us
-                </UncontrolledTooltip>
-                <Button
-                  className="btn-icon btn-neutral btn-round btn-simple"
-                  color="default"
-                  href="https://www.facebook.com/creativetim"
+                  href="https://www.linkedin.com/in/amitbadala/"
                   id="tooltip230450801"
                   target="_blank"
                 >
-                  <i className="fab fa-facebook-square" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip230450801">
-                  Like us
-                </UncontrolledTooltip>
+                  <i className="fab fa-linkedin" />
+                </Button> 
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
-                  href="https://dribbble.com/creativetim"
+                  href="https://github.com/amitbadala"
                   id="tooltip318450378"
                   target="_blank"
                 >
-                  <i className="fab fa-dribbble" />
-                </Button>
-                <UncontrolledTooltip delay={0} target="tooltip318450378">
-                  Follow us
-                </UncontrolledTooltip>
+                  <i className="fab fa-github" />
+                </Button> 
               </div>
             </Col>
-          </Row>*/}
+            <Col md="3">
+                <div><img alt="Amit Badala" className="profile-image img-fluid rounded-circle shadow-lg" src={require("../../assets/img/amitbadala_profile.jpg")}/></div>
+             </Col>
+          </Row>
         </Container>
       </footer>
     );

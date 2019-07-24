@@ -1,11 +1,11 @@
 {
   "name": "blk-design-system-react",
   "version": "1.0.0",
-  "description": "React version of BLK Design System by Creative Tim",
+  "description": "Amit Badala portfolio",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativetimofficial/blk-design-system-react.git"
+    "url": "git+https://github.com/"
   },
   "keywords": [
     "react",
@@ -28,7 +28,7 @@
   "author": "Creative Tim",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativetimofficial/blk-design-system-react/issues"
+    "url": "https://github.com"
   },
   "homepage": "https://amitbadala.github.io/snake-portfolio",
   "dependencies": {
@@ -40,10 +40,12 @@
     "nouislider": "13.1.1",
     "perfect-scrollbar": "1.4.0",
     "react": "16.8.3",
+    "react-animated-css": "^1.2.1",
     "react-bootstrap-switch": "15.5.3",
     "react-chartjs-2": "2.7.4",
     "react-datetime": "2.16.3",
     "react-dom": "16.8.3",
+    "react-particles-js": "^2.7.0",
     "react-router-dom": "4.3.1",
     "react-scripts": "2.1.5",
     "reactstrap": "7.1.0"

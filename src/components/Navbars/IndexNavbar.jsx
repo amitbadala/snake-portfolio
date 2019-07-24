@@ -1,17 +1,10 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"; 
 // reactstrap components
 import {
-  Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
-  NavLink,
   Nav,
   Container,
   Row,
@@ -83,10 +76,9 @@ class ComponentsNavbar extends React.Component {
               data-placement="bottom"
               to="/"
               rel="noopener noreferrer"
-              title="Amit Portfolio"
-              tag={Link}
+              title="Amit Portfolio" 
             >
-              Amit Badala
+              <h3 className="pageTitle">Hi I'm Amit</h3>
             </NavbarBrand>
             {/* <button
               aria-expanded={this.state.collapseOpen}
@@ -119,46 +111,16 @@ class ComponentsNavbar extends React.Component {
               </Row>
             </div>
             <Nav navbar>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  data-toggle="dropdown"
-                  href="#pablo"
-                  nav
-                  onClick={e => e.preventDefault()}
-                >
-                  <i className="fa fa-cogs d-lg-none d-xl-none" />
-                  Menu
-                </DropdownToggle>
-                <DropdownMenu className="dropdown-with-icons">
-                  <DropdownItem>
-                    <a href="#about" className="bg-primary">
-                      About
-                    </a>
-                  </DropdownItem>
-                  <DropdownItem>
-                    {" "}
-                    <a href="#about" className="bg-success">
-                      Portfolio
-                    </a>
-                  </DropdownItem>
-                  <DropdownItem>
-                    {" "}
-                    <a href="#about" className="bg-warning">
-                      Contact
-                    </a>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
               <NavItem>
-                <Button
+                <a
                   className="nav-link d-none d-lg-block"
                   color="default"
-                  onClick={this.scrollToDownload}
+                  target="_blank"
+                  href="https://drive.google.com/open?id=1h0Azd5TEccOvFmP-KCKVTAKQzewtizfe" 
+                  rel="noopener noreferrer"
                 >
                   <i className="tim-icons icon-cloud-download-93" /> Resume
-                </Button>
+                </a>
               </NavItem>
             </Nav>
           </Collapse>
