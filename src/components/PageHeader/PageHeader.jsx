@@ -243,7 +243,8 @@ class PageHeader extends React.Component {
       return "Loading....";
     }
     return (
-      <div className="section section-basic">
+      <div className="section section-basic" style={{flexGrow:1}}>
+          
         <img alt="..." className="path" src={require("assets/img/path4.png")} />
         {/* <div className="squares square1" />
         <div className="squares square2" />
