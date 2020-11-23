@@ -1,23 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "57534916c3e4ffe963d9",
-    "url": "/snake-portfolio/static/css/main.f04e1aa4.chunk.css"
+    "revision": "8a976675e54f5d1cf8cf",
+    "url": "/snake-portfolio/static/css/main.5aa30e10.chunk.css"
   },
   {
-    "revision": "57534916c3e4ffe963d9",
-    "url": "/snake-portfolio/static/js/main.57534916.chunk.js"
+    "revision": "8a976675e54f5d1cf8cf",
+    "url": "/snake-portfolio/static/js/main.8a976675.chunk.js"
   },
   {
     "revision": "bcffec1b324385856fe1",
     "url": "/snake-portfolio/static/js/runtime~main.bcffec1b.js"
   },
   {
-    "revision": "ec8cb0272dba076cc187",
-    "url": "/snake-portfolio/static/js/2.ec8cb027.chunk.js"
-  },
-  {
-    "revision": "e93541cd10192d8ab698566a63d9c997",
-    "url": "/snake-portfolio/static/media/signature.e93541cd.svg"
+    "revision": "b243bb26273d669a9fd0",
+    "url": "/snake-portfolio/static/js/2.b243bb26.chunk.js"
   },
   {
     "revision": "03ef1918e505c3e3471f9369ef7a638f",
@@ -40,6 +36,10 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/square1.ca257073.png"
   },
   {
+    "revision": "ff004a0e5de54ba9dbd8583fa7e1b3f5",
+    "url": "/snake-portfolio/static/media/square5.ff004a0e.png"
+  },
+  {
     "revision": "6619b9792d7d108bb589b51bbd560278",
     "url": "/snake-portfolio/static/media/square2.6619b979.png"
   },
@@ -48,31 +48,23 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/square3.23fa7623.png"
   },
   {
-    "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
-    "url": "/snake-portfolio/static/media/square4.8fdf9ee2.png"
+    "revision": "b81dabc0bc6ca52fce921e3a928d5e0f",
+    "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
   },
   {
-    "revision": "ff004a0e5de54ba9dbd8583fa7e1b3f5",
-    "url": "/snake-portfolio/static/media/square5.ff004a0e.png"
+    "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
+    "url": "/snake-portfolio/static/media/square4.8fdf9ee2.png"
   },
   {
     "revision": "e37326c7e0fd9826c1a35b231340f58b",
     "url": "/snake-portfolio/static/media/path4.e37326c7.png"
   },
   {
-    "revision": "317e95eddabacbb5417f322b1945f518",
-    "url": "/snake-portfolio/static/media/half-wave.317e95ed.svg"
+    "revision": "56ebc5d88c121884cd0cb332de5287cf",
+    "url": "/snake-portfolio/static/media/amitbadala_profile.56ebc5d8.jpg"
   },
   {
-    "revision": "b81dabc0bc6ca52fce921e3a928d5e0f",
-    "url": "/snake-portfolio/static/media/dots.b81dabc0.png"
-  },
-  {
-    "revision": "52b736f2c6e739118e5b9a32a21434ea",
-    "url": "/snake-portfolio/static/media/developer-dribbble.52b736f2.gif"
-  },
-  {
-    "revision": "38e71045d1691609ad50a7efdce5fc86",
+    "revision": "477eafabcd7e2bd548f616208330523d",
     "url": "/snake-portfolio/index.html"
   }
 ];
