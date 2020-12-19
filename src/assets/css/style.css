@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  background: url("../../assets/img/dots.png");
+  background-color: #3e3e3e;
+  background-size: contain;
+  height: 100vh;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: flex-end;
+}
+
+p {
+  font-size: 14px;
+  color: #faf8ef;
+}
+
+.developer-animation {
+  position: absolute;
+  right: 0;
+  background-image: url("./../img/developer-dribbble.gif");
+  height: 200px;
+  width: 200px;
+  background-size: contain;
+  border-radius: 50%;
+  background-color: #2f2f2f;
+  background-blend-mode: luminosity;
+  box-shadow: inset 0 0 30px #3e3e3e;
+  margin-bottom: 15px;
+}
+
+.wave-footer {
+  background-image: url("./../img/half-wave.svg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  min-height: 200px;
+  background-size: cover;
+  display: flex;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+  justify-content: space-between;
+}
+
+.section .section-basic {
+  flex-grow: 1;
+}
+
+.signature {
+  width: 230px;
+  position: absolute;
+  filter: drop-shadow(2px 2px 2px black);
+  right: 0;
+}
+
+.form-control {
+  border-color: white;
+}
