@@ -530,9 +530,10 @@ box-shadow:         inset 0 1px 1px 0 rgba(60,64,67,.08), 0 1px 3px 1px rgba(60,
   position: absolute;
   width: 4%;
   height: 4%;
-  border-radius: 50%; 
+  border-radius: 50%;
   z-index: 1;
-  animation: blinker 1s linear infinite;  box-shadow: 0 -1px 10px rgb(197, 195, 189);
+  animation: blinker 1s linear infinite;
+  box-shadow: 0 -1px 10px rgb(197, 195, 189);
 }
 
 @keyframes blinker {
@@ -697,7 +698,8 @@ strong {
   text-align: center;
 }
 .section-basic {
-  padding-top: 120px;
+  display: flex;
+  padding-top: 75px;
   padding-bottom: 20px;
 }
 /* .footer {
@@ -721,80 +723,80 @@ strong {
   top: 15px;
 }
 
-
-.skills{
-  margin-top:0px;
+.skills {
+  margin-top: 0px;
   font-size: 18px;
 }
 
-.profile-image{
+.profile-image {
   height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: -50px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
 }
 
 .footer .title {
-  margin:15px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;
 }
 
-.row-grid > ul > li h4{
+.row-grid > ul > li h4 {
   line-height: 1.45em;
-    font-size: 12px;
-    margin-bottom: 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .portfolio a {
   color: #00f2c3 !important;
 }
- 
+
 .pageTitle {
-  margin-bottom:0px;
+  margin-bottom: 0px;
 }
 
-.navbar.navbar-transparent{
+.navbar.navbar-transparent {
   padding: 0.9375rem;
 }
 
-label{
-  color:white;
+label {
+  color: white;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
   .section-basic {
-    padding-bottom:180px;
+    padding-bottom: 180px;
     padding-top: 100px;
   }
   .footer .title {
-    margin:5px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
   }
 
-  .footer{
+  .footer {
     text-align: left;
   }
 
-  .profile-image{
+  .profile-image {
     bottom: 20px;
     right: 15px;
     top: unset;
   }
 
-  .show, .footer:hover {
+  .show,
+  .footer:hover {
     display: block;
-}
-}
-
-
-.text-primary{
-  color:#F8D230!important;
-}
-.bg-primary{
-  background-color: #F8D230!important;
-}
-a.text-primary:hover, a.text-primary:focus{
-  color:yellow!important;
+  }
 }
 
-.btn-neutral{
+.text-primary {
+  color: #f8d230 !important;
+}
+.bg-primary {
+  background-color: #f8d230 !important;
+}
+a.text-primary:hover,
+a.text-primary:focus {
+  color: yellow !important;
+}
+
+.btn-neutral {
   color: #161941;
 }

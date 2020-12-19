@@ -245,15 +245,8 @@ class PageHeader extends React.Component {
     return (
       <div className="section section-basic" style={{flexGrow:1}}>
           
-        <img alt="..." className="path" src={require("assets/img/path4.png")} />
-        {/* <div className="squares square1" />
-        <div className="squares square2" />
-        <div className="squares square3" />
-        <div className="squares square4" />
-        <div className="squares square5" />
-        <div className="squares square6" />
-        <div className="squares square7" /> */}
-        <Container>
+        <img alt="..." className="path" src={require("assets/img/path4.png")} /> 
+        <Container style={{alignSelf:"center"}}>
           <Row>
             <Col md="4">
               <div className="navMenu">
