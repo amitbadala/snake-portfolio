@@ -414,14 +414,13 @@ function UpdateNavContent(props) {
             <p>
               My skills are broad: from ux to design, front end to back end
               development.I enjoy each aspect, and love building sites & mobile
-              apps from start to finish, for clients all over the world.
+              apps from start to finish.
             </p>
             <br />
             <p>
               I stay close to community and try to keep pace with which the web
-              is evolving. I also like to blog about what I learn or things
-              which I find interesting. I have working experience in Angular,
-              javascript, .Net, SQL Server
+              is evolving. I have working experience in React, Nodejs, Rails,
+              Angular, .Net, SQL Server
             </p>
           </Col>
           <Col md="3">
@@ -451,7 +450,7 @@ function UpdateNavContent(props) {
             <p>
               My skills are broad: from ux to design, front end to back end
               development.I enjoy each aspect, and love building sites & mobile
-              apps from start to finish, for clients all over the world.
+              apps from start to finish.
             </p>
             <br />
             <p>
@@ -715,7 +714,7 @@ export class Portfolio extends React.Component {
               <Row className="row-grid">
                 <ul>
                   <li>
-                    <h4>
+                    <p>
                       Idyll - Open Source Contribution to markup language IDYLL
                       using react & node , checkout my{" "}
                       <a
@@ -725,10 +724,10 @@ export class Portfolio extends React.Component {
                       >
                         contribution
                       </a>
-                    </h4>
+                    </p>
                   </li>
                   <li>
-                    <h4>
+                    <p>
                       Onego - Hybrid Mobile application for reseller agents
                       developed using Ionic Framework,Angular |{" "}
                       <a
@@ -738,10 +737,10 @@ export class Portfolio extends React.Component {
                       >
                         Android
                       </a>{" "}
-                    </h4>
+                    </p>
                   </li>
                   <li>
-                    <h4>
+                    <p>
                       Oneinsure - Hybrid Mobile application for users to manage
                       their insurance policies developed using Ionic
                       Framework,Angular |{" "}
@@ -760,67 +759,29 @@ export class Portfolio extends React.Component {
                       >
                         iOs
                       </a>
-                    </h4>
+                    </p>
                   </li>
                   <li>
-                    <h4>
+                    <p>
                       Investment Ecommerce - Developed three verticals of
                       investment ecommerce
-                    </h4>
-                    <ul>
-                      <li>
-                        <a
-                          href="https://www.oneinsure.com/life-insurance/child-plan"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Child Insurance
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.oneinsure.com/life-insurance/retirement"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Retirement Insurance
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.oneinsure.com/life-insurance/shortterm"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Short Term Insurance
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          href="https://www.oneinsure.com/life-insurance/moneyback"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          Money Back
-                        </a>
-                      </li>
-                    </ul>
+                    </p>
                   </li>
                   <br />
                   <li>
-                    <h4>
+                    <p>
                       CMS Blog Engine - Created custom themes and an interface
                       to dynamically switch between them
-                    </h4>
+                    </p>
                   </li>
                   <li>
-                    <h4>
+                    <p>
                       Motilal Oswal CRM - worked on one of India's largest
                       trading platform provider
-                    </h4>
+                    </p>
                   </li>
                   <li>
-                    <h4>Car Rental Project - Car rental web applicatoin </h4>
+                    <p>Car Rental Project - Car rental web applicatoin </p>
                   </li>
                 </ul>
                 <h5>

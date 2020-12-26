@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 // reactstrap components
 import {
   Collapse,
@@ -8,7 +8,7 @@ import {
   Nav,
   Container,
   Row,
-  Col
+  Col,
 } from "reactstrap";
 
 class ComponentsNavbar extends React.Component {
@@ -16,7 +16,7 @@ class ComponentsNavbar extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
-      color: "navbar-transparent"
+      color: "navbar-transparent",
     };
   }
   componentDidMount() {
@@ -31,31 +31,31 @@ class ComponentsNavbar extends React.Component {
       document.body.scrollTop > 99
     ) {
       this.setState({
-        color: "bg-info"
+        color: "bg-info",
       });
     } else if (
       document.documentElement.scrollTop < 100 ||
       document.body.scrollTop < 100
     ) {
       this.setState({
-        color: "navbar-transparent"
+        color: "navbar-transparent",
       });
     }
   };
   toggleCollapse = () => {
     document.documentElement.classList.toggle("nav-open");
     this.setState({
-      collapseOpen: !this.state.collapseOpen
+      collapseOpen: !this.state.collapseOpen,
     });
   };
   onCollapseExiting = () => {
     this.setState({
-      collapseOut: "collapsing-out"
+      collapseOut: "collapsing-out",
     });
   };
   onCollapseExited = () => {
     this.setState({
-      collapseOut: ""
+      collapseOut: "",
     });
   };
   scrollToDownload = () => {
@@ -76,9 +76,9 @@ class ComponentsNavbar extends React.Component {
               data-placement="bottom"
               to="/"
               rel="noopener noreferrer"
-              title="Amit Portfolio" 
+              title="Amit Portfolio"
             >
-              <h3 className="pageTitle">Hi I'm Amit</h3>
+              <h3 className="pageTitle">Hi I'm Amit 🚀</h3>
             </NavbarBrand>
             {/* <button
               aria-expanded={this.state.collapseOpen}
@@ -116,7 +116,7 @@ class ComponentsNavbar extends React.Component {
                   className="nav-link d-none d-lg-block"
                   color="default"
                   target="_blank"
-                  href="https://drive.google.com/open?id=1h0Azd5TEccOvFmP-KCKVTAKQzewtizfe" 
+                  href="https://drive.google.com/open?id=1h0Azd5TEccOvFmP-KCKVTAKQzewtizfe"
                   rel="noopener noreferrer"
                 >
                   <i className="tim-icons icon-cloud-download-93" /> Resume
