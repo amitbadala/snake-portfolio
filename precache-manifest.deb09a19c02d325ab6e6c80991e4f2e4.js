@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "6608c6f85bfa6c5deb6e",
-    "url": "/snake-portfolio/static/css/main.cf42a576.chunk.css"
+    "revision": "34eca3f85ec23ef1fef2",
+    "url": "/snake-portfolio/static/css/main.a349f584.chunk.css"
   },
   {
-    "revision": "6608c6f85bfa6c5deb6e",
-    "url": "/snake-portfolio/static/js/main.6608c6f8.chunk.js"
+    "revision": "34eca3f85ec23ef1fef2",
+    "url": "/snake-portfolio/static/js/main.34eca3f8.chunk.js"
   },
   {
     "revision": "bcffec1b324385856fe1",
     "url": "/snake-portfolio/static/js/runtime~main.bcffec1b.js"
   },
   {
-    "revision": "6d657ec3d50f49fd3bd7",
-    "url": "/snake-portfolio/static/js/2.6d657ec3.chunk.js"
+    "revision": "da603dd07e4edce7e6db",
+    "url": "/snake-portfolio/static/js/2.da603dd0.chunk.js"
   },
   {
     "revision": "e93541cd10192d8ab698566a63d9c997",
@@ -36,20 +36,20 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/nucleo.b17a118e.ttf"
   },
   {
-    "revision": "6619b9792d7d108bb589b51bbd560278",
-    "url": "/snake-portfolio/static/media/square2.6619b979.png"
-  },
-  {
     "revision": "8fdf9ee20db40e5d1cf778bf99486cb7",
     "url": "/snake-portfolio/static/media/square4.8fdf9ee2.png"
   },
   {
-    "revision": "23fa76237f0066f4ffd8f20e77449887",
-    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
-  },
-  {
     "revision": "ca25707397fcc982d7dc1f82555f09a0",
     "url": "/snake-portfolio/static/media/square1.ca257073.png"
+  },
+  {
+    "revision": "6619b9792d7d108bb589b51bbd560278",
+    "url": "/snake-portfolio/static/media/square2.6619b979.png"
+  },
+  {
+    "revision": "23fa76237f0066f4ffd8f20e77449887",
+    "url": "/snake-portfolio/static/media/square3.23fa7623.png"
   },
   {
     "revision": "ff004a0e5de54ba9dbd8583fa7e1b3f5",
@@ -72,7 +72,11 @@ self.__precacheManifest = [
     "url": "/snake-portfolio/static/media/developer-dribbble.52b736f2.gif"
   },
   {
-    "revision": "449507ef0addc0604bb023d446159892",
+    "revision": "274211a7910ade7febf8fdc0a4e5debe",
+    "url": "/snake-portfolio/static/media/preloader_loading.274211a7.gif"
+  },
+  {
+    "revision": "678eb8f1c12e198db4b345312e6a32e8",
     "url": "/snake-portfolio/index.html"
   }
 ];
