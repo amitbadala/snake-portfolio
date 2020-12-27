@@ -1,33 +1,37 @@
-import React from "react"; 
+import React from "react";
 // reactstrap components
-import {
-  Button,
-  Container,
-  Row,
-  Col} from "reactstrap"; 
-  import Signature from './../../assets/img/signature.svg'
+import { Button, Container, Row, Col } from "reactstrap";
+import Signature from "./../../assets/img/signature.svg";
 
 class Footer extends React.Component {
   render() {
     return (
       <footer className="wave-footer">
-        <Container style={{position:'relative',display:'flex',justifyContent:'space-between'}}>
+        <Container
+          style={{
+            position: "relative",
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+          }}
+        >
           {/* <div className="flex-col"> */}
           {/* <div className="developer-animation"> 
         </div> */}
-          <div style={{alignItems: 'center',
-    display: 'flex',flexGrow:1
-}}>
-          <div className="flex-row" style={{marginRight:'10%'}}> 
-        <h4>Reach me</h4>
-      
-        <p><i className="far fa-envelope"></i> : amitbadala07@gmail.com</p>
-              <p><i className ="fas fa-mobile-alt"></i> : (+91)- 9870758470</p>
-             
-        </div>
-        <div className="flex-row">
-        <h4>Follow me</h4>
-        <div className="btn-wrapper profile"> 
+          <div style={{ alignItems: "center", display: "flex", flexGrow: 1 }}>
+            <div className="flex-row" style={{ marginRight: "10%" }}>
+              <h4>Reach me</h4>
+
+              <p>
+                <i className="far fa-envelope"></i> : amitbadala07@gmail.com
+              </p>
+              <p>
+                <i className="fas fa-mobile-alt"></i> : (+91)- 9870758470
+              </p>
+            </div>
+            <div className="flex-row">
+              <h4>Follow me</h4>
+              <div className="btn-wrapper profile">
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
@@ -36,7 +40,7 @@ class Footer extends React.Component {
                   target="_blank"
                 >
                   <i className="fab fa-linkedin" />
-                </Button> 
+                </Button>
                 <Button
                   className="btn-icon btn-neutral btn-round btn-simple"
                   color="default"
@@ -45,13 +49,13 @@ class Footer extends React.Component {
                   target="_blank"
                 >
                   <i className="fab fa-github" />
-                </Button> 
-              </div></div>   
-      
-      </div>
-      <img src={Signature} className="signature"/>
-      </Container>
-        
+                </Button>
+              </div>
+            </div>
+          </div>
+          <img src={Signature} className="signature" />
+        </Container>
+
         {/* <div className="developer-animation"> 
         </div> */}
         {/* <Container>

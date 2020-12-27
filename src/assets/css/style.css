@@ -52,6 +52,9 @@ p {
 .section .section-basic {
   flex-grow: 1;
 }
+.section-basic {
+  overflow: unset;
+}
 
 .signature {
   width: 230px;
@@ -62,4 +65,24 @@ p {
 
 .form-control {
   border-color: white;
+}
+
+.preloader-bg {
+  height: 100%;
+  background: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar.bg-info {
+  background-color: #272727 !important;
+}
+
+@media screen and (max-width: 480px) {
+  .signature {
+    position: unset;
+    display: block;
+    margin: 0px auto;
+  }
 }
